@@ -19,6 +19,8 @@ namespace TradeBlotterAppl
     /// <summary>
     /// Interaction logic for LoginWindow.xaml
     /// </summary>
+    /// 
+    /// This uis a method
     public partial class LoginWindow : Window
     {
         public LoginWindow()

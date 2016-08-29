@@ -46,3 +46,19 @@ C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug
 C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.g.resources
 C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.Properties.Resources.resources
 C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csproj.GenerateResource.Cache
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.exe.config
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.exe
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.pdb
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.exe
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.pdb
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csprojResolveAssemblyReference.cache
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\LoginWindow.g.cs
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\MainWindow.g.cs
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\App.g.cs
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl_MarkupCompile.cache
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl_MarkupCompile.lref
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\LoginWindow.baml
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\MainWindow.baml
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.g.resources
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.Properties.Resources.resources
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csproj.GenerateResource.Cache
