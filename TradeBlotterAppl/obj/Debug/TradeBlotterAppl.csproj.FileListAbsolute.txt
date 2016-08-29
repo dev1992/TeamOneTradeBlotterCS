@@ -1,0 +1,48 @@
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.exe.config
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.exe
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.pdb
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csprojResolveAssemblyReference.cache
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\MainWindow.g.cs
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\App.g.cs
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl_MarkupCompile.cache
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl_MarkupCompile.lref
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\MainWindow.baml
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.g.resources
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.Properties.Resources.resources
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csproj.GenerateResource.Cache
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.exe
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.pdb
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\LoginWindow.g.cs
+C:\Users\Grad125\Desktop\anshuman\trade blotter\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\LoginWindow.baml
+F:\TradeBlotterAppl\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.exe.config
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.exe
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.pdb
+F:\TradeBlotterAppl\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.exe
+F:\TradeBlotterAppl\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.pdb
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csprojResolveAssemblyReference.cache
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\LoginWindow.g.cs
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\MainWindow.g.cs
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\App.g.cs
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl_MarkupCompile.cache
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl_MarkupCompile.lref
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\LoginWindow.baml
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\MainWindow.baml
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.g.resources
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.Properties.Resources.resources
+F:\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csproj.GenerateResource.Cache
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.exe.config
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.exe
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.pdb
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.exe
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\bin\Debug\TradeBlotterAppl.pdb
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csprojResolveAssemblyReference.cache
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\LoginWindow.g.cs
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\MainWindow.g.cs
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\App.g.cs
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl_MarkupCompile.cache
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl_MarkupCompile.lref
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\LoginWindow.baml
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\MainWindow.baml
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.g.resources
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.Properties.Resources.resources
+C:\Users\Grad70\Documents\Pendrive 2\TradeBlotterAppl\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csproj.GenerateResource.Cache
