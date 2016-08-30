@@ -18,7 +18,7 @@
         <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Click="LoginAction" Canvas.Left="241" Canvas.Top="248" Height="31"/>
 
         <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="195" Canvas.Top="204" Canvas.Left="205"/>
-        <Button x:Name="button" Content="Sign Up" Canvas.Left="379" Canvas.Top="41" Width="101" Height="25" Click="goToSignUp"/>
+        <Button x:Name="button" Content="Sign Up" Canvas.Left="379" Canvas.Top="40" Width="101" Height="25" Click="goToSignUp"/>
 
     </Canvas>
 </Window>

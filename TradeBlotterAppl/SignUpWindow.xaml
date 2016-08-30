@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="SignUpWindow" Height="300" Width="300">
     <Canvas>
+        <Image x:Name="images_jpg" Height="270" Source="images.jpg" Stretch="Fill" Width="292"/>
+
         <TextBox x:Name="txtNewUserName" Height="23" Canvas.Left="145" TextWrapping="Wrap" Text="" Canvas.Top="69" Width="120"/>
         <PasswordBox x:Name="txtNewPassword" Canvas.Left="145" Canvas.Top="109" Width="120" Height="26"/>
         <Label x:Name="label" Content="User Name" Canvas.Left="36" Canvas.Top="66" Width="75"/>

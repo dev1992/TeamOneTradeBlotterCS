@@ -11,8 +11,11 @@
         Left="80"
         Top="100">
     <Canvas Loaded="ReadAPI">
-        <DataGrid x:Name="dataTrade" Canvas.Left="100" Canvas.Top="100" Height="auto" Width="900"/>
-        <ListBox x:Name="lstUserName" BorderBrush="White"  Height="52" Canvas.Left="1050" Canvas.Top="61" Width="115"/>
+        <Image x:Name="loginImage_png" Height="52" Source="loginImage.png" Stretch="Fill" Width="73" Canvas.Left="970" Canvas.Top="28"/>
+
+
+        <DataGrid x:Name="dataTrade" Canvas.Left="100" Canvas.Top="150" Height="auto" Width="900"/>
+        <ListBox x:Name="lstUserName" FontWeight="Bold" FontStretch="Normal" FontSize="20" BorderBrush="White"   Height="52" Canvas.Left="1048" Canvas.Top="28" Width="134"/>
 
 
     </Canvas>
