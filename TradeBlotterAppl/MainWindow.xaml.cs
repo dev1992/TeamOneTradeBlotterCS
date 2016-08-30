@@ -42,9 +42,9 @@ namespace TradeBlotterAppl
 
             }
             dataTrade.ItemsSource = other;
-            LoginWindow login = new LoginWindow();
+           /* LoginWindow login = new LoginWindow();
             string username = login.txtUserName.Text;
-            lstUserName.Items.Add(username) ;
+            lstUserName.Items.Add(username) ;*/
         }
     }
 }

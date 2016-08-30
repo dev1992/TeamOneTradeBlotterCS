@@ -45,6 +45,7 @@ namespace TradeBlotterAppl
             //{
             //    MessageBox.Show(response);
             //}
+            string naam;
             using (client)
             {
                 var values = new NameValueCollection();
@@ -55,6 +56,8 @@ namespace TradeBlotterAppl
                 if(str=="true")
                 {
                     MainWindow userLog = new MainWindow();
+                     naam=txtUserName.Text;
+                    userLog.lstUserName.Items.Add(naam);
                     bool? result1 = userLog.ShowDialog();
                 }
                 else
