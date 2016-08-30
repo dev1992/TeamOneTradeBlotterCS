@@ -13,8 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net;
-using System;
-using System.Net;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
@@ -44,23 +42,9 @@ namespace TradeBlotterAppl
 
             }
             dataTrade.ItemsSource = other;
+            LoginWindow login = new LoginWindow();
+            string username = login.txtUserName.Text;
+            lstUserName.Items.Add(username) ;
         }
-
-        //private void ReadAPI(object sender, RoutedEventArgs e)
-        //{
-        //    WebClient webClient = new WebClient();
-        //    Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterWeb/rest/trades");
-        //    DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
-        //    TradeData[] other = (TradeData[])serializer.ReadObject(data);
-        //    string msg = "";
-        //    foreach (TradeData acc in other)
-        //    {
-        //        msg += acc.ToString() + System.Environment.NewLine;
-
-        //    }
-        //    dataTrade.ItemsSource = other;
-
-        //  //  MessageBox.Show(msg);
-        //}
     }
 }

@@ -30,7 +30,7 @@ namespace TradeBlotterAppl
 
         private void LoginAction(object sender, RoutedEventArgs e)
         {
-            string userName = txtUserName.Text;
+            string username = txtUserName.Text;
             string password = txtPassword.Password;
             var client = new WebClient();
             //string url = "http://10.87.239.26:8080/TeamOneTradeBlotterWeb/rest/traders/signin?username=" + userName + "&password=" + password;
@@ -48,7 +48,7 @@ namespace TradeBlotterAppl
             using (client)
             {
                 var values = new NameValueCollection();
-                values["username"] = userName;
+                values["username"] = username;
                 values["password"] = password;
                 var res = client.UploadValues("http://10.87.239.26:8080/TeamOneTradeBlotterWeb/rest/traders/signinsecure", values);
                 var str = Encoding.Default.GetString(res);
