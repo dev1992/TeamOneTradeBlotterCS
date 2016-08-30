@@ -69,6 +69,11 @@ namespace TradeBlotterAppl
 
         }
 
+        private void goToSignUp(object sender, RoutedEventArgs e)
+        {
+            SignUpWindow newUserAdd = new SignUpWindow();
+            bool? resultLoginAttempt = newUserAdd.ShowDialog();
+        }
     }
     }
 

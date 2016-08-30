@@ -11,8 +11,8 @@
         Left="80"
         Top="100">
     <Canvas Loaded="ReadAPI">
-        <DataGrid x:Name="dataTrade" Canvas.Left="100" Canvas.Top="23" Height="auto" Width="900"/>
-        <ListBox x:Name="lstUserName" Height="100" Canvas.Left="658" Canvas.Top="387" Width="435"/>
+        <DataGrid x:Name="dataTrade" Canvas.Left="100" Canvas.Top="100" Height="auto" Width="900"/>
+        <ListBox x:Name="lstUserName" BorderBrush="White"  Height="52" Canvas.Left="1050" Canvas.Top="61" Width="115"/>
 
 
     </Canvas>

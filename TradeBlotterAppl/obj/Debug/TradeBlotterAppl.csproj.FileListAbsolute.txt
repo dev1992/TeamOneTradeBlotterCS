@@ -62,3 +62,5 @@ C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug
 C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.g.resources
 C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.Properties.Resources.resources
 C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csproj.GenerateResource.Cache
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\SignUpWindow.g.cs
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\SignUpWindow.baml
