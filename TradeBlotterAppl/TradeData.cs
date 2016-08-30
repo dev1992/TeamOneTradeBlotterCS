@@ -12,6 +12,26 @@ namespace TradeBlotterAppl
     [DataContract]
     public class TradeData
     {
+        public enum TradeSide { Buy, Sell}
+        //[DataMember]
+        public  TradeSide GetTradeSide{ get {
+                if (side == true)
+                    return TradeSide.Sell;
+                else
+                    return TradeSide.Buy;
+            } }
+        public enum TradeMedia { Voice,Electronic }
+        //[DataMember]
+        public TradeMedia GetTradeMedia
+        {
+            get
+            {
+                if (media == true)
+                    return TradeMedia.Electronic;
+                else
+                    return TradeMedia.Voice;
+            }
+        }
         [DataMember]
         public int tradeID { get; set; }
         [DataMember]
@@ -50,14 +70,24 @@ namespace TradeBlotterAppl
             this.quantity = quantity;
             this.price = price;
             this.side = side;
+            //if (side == false)
+            //    this.side = "BUY";
+            //else
+            //    this.side = "SELL";
             this.submitTime = submitTime;
             this.status = status;
             this.currency = currency;
             this.media = media;
+            //if (media == false)
+            //    this.media = "VOICE";
+            //else
+            //    this.media = "ELECTRONIC";
             this.executionTime = executionTime;
             this.buyerFirm = buyerFirm;
             this.sellerFirm = sellerFirm;
+            
         }
+      
         public override string ToString()
         {
             return tradeID + " " + productType + " " + productName + " " + productName + " " + traderID + " " + quantity + " " + price + " " + side + " " + submitTime + " " + status + " " + currency + " " + media + " " + executionTime + " " + buyerFirm + " " + sellerFirm;

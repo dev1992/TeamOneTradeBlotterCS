@@ -38,7 +38,7 @@ namespace TradeBlotterAppl
             string msg = "";
             foreach (TradeData acc in other)
             {
-                msg += acc.ToString() + System.Environment.NewLine;
+                msg += acc.ToString() + acc.GetTradeSide+acc.GetTradeMedia+System.Environment.NewLine;
 
             }
             dataTrade.ItemsSource = other;
