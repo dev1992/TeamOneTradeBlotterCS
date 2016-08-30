@@ -32,7 +32,7 @@ namespace TradeBlotterAppl
         private void ReadAPI(object sender, RoutedEventArgs e)
         {
             WebClient webClient = new WebClient();
-            Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterWeb/rest/trades");
+            Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades");
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
             TradeData[] other = (TradeData[])serializer.ReadObject(data);
             string msg = "";
@@ -45,6 +45,14 @@ namespace TradeBlotterAppl
            /* LoginWindow login = new LoginWindow();
             string username = login.txtUserName.Text;
             lstUserName.Items.Add(username) ;*/
+        }
+
+        private void filterTradeBlotter(object sender, RoutedEventArgs e)
+        {
+            FilterWindow filterWindow = new FilterWindow();
+            //naam = txtUserName.Text;
+            //userLog.lstUserName.Items.Add(naam);
+            bool? result1 = filterWindow.ShowDialog();
         }
     }
 }

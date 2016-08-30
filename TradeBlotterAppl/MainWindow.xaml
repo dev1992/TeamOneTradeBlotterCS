@@ -11,11 +11,15 @@
         Left="80"
         Top="100">
     <Canvas Loaded="ReadAPI">
-        <Image x:Name="loginImage_png" Height="52" Source="loginImage.png" Stretch="Fill" Width="73" Canvas.Left="970" Canvas.Top="28"/>
+        <Image x:Name="loginImage_png" Height="52" Source="loginImage.png" Stretch="Fill" Width="73" Canvas.Left="10" Canvas.Top="10" RenderTransformOrigin="0.521,0.692"/>
 
 
-        <DataGrid x:Name="dataTrade" Canvas.Left="100" Canvas.Top="150" Height="auto" Width="auto"/>
-        <ListBox x:Name="lstUserName" FontWeight="Bold" FontStretch="Normal" FontSize="20" BorderBrush="White"   Height="52" Canvas.Left="1048" Canvas.Top="28" Width="134"/>
+        <DataGrid x:Name="dataTrade"  Canvas.Left="30" Canvas.Top="200" Height="auto" Width="auto"/>
+        <ListBox x:Name="lstUserName" FontWeight="Bold" FontStretch="Normal" FontSize="20" BorderBrush="White"   Height="52" Canvas.Left="100" Canvas.Top="10" Width="134"/>
+        <Button x:Name="button" Content="Filter" Canvas.Left="204" Canvas.Top="90" Width="133" Height="44" Click="filterTradeBlotter"/>
+        <Button x:Name="button1" Content="Message Box" Canvas.Left="424" Canvas.Top="90" Width="133" Height="44"/>
+        <Button x:Name="button2" Content="Calculator" Canvas.Left="704" Canvas.Top="90" Width="133" Height="44"/>
+        <Button x:Name="button3" Content="Analysis" Canvas.Left="948" Canvas.Top="90" Width="133" Height="44"/>
 
 
     </Canvas>

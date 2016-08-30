@@ -34,9 +34,12 @@ namespace TradeBlotterAppl
             using (client)
             {
                 var values = new NameValueCollection();
-                values["username"] = newUsername;
+                
+                values["userName"] = newUsername;
                 values["password"] = newPassword;
-                var res = client.UploadValues("http://10.87.239.26:8080/TeamOneTradeBlotterWeb/rest/traders/registersecure", values);
+                values["firstName"] = newUsername;
+                values["lastName"] = newUsername;
+                var res = client.UploadValues("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/traders/registersecure", values);
             }
             this.Close();
          }
