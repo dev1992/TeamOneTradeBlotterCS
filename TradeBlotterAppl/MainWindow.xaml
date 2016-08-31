@@ -10,17 +10,39 @@
         Width="1200"
         Left="80"
         Top="100">
-    <Canvas Loaded="ReadAPI">
-        <Image x:Name="loginImage_png" Height="52" Source="loginImage.png" Stretch="Fill" Width="73" Canvas.Left="10" Canvas.Top="10" RenderTransformOrigin="0.521,0.692"/>
-
-
-        <DataGrid x:Name="dataTrade"  Canvas.Left="30" Canvas.Top="200" Height="350" Width="auto"/>
-        <ListBox x:Name="lstUserName" FontWeight="Bold" FontStretch="Normal" FontSize="20" BorderBrush="White"   Height="52" Canvas.Left="100" Canvas.Top="10" Width="134"/>
-        <Button x:Name="button" Content="Filter" Canvas.Left="204" Canvas.Top="90" Width="133" Height="44" Click="filterTradeBlotter"/>
-        <Button x:Name="button1" Content="Message Box" Canvas.Left="424" Canvas.Top="90" Width="133" Height="44"/>
-        <Button x:Name="button2" Content="Calculator" Canvas.Left="704" Canvas.Top="90" Width="133" Height="44"/>
-        <Button x:Name="button3" Content="Analysis" Canvas.Left="948" Canvas.Top="90" Width="133" Height="44"/>
-
-
-    </Canvas>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Label Grid.Row="0" Margin="2">
+                <Label.Content>
+                    <Binding Path="CurrentPage">
+                        <Binding.StringFormat>Current Page: {0}</Binding.StringFormat>
+                    </Binding>
+                </Label.Content>
+            </Label>
+            <Button Content="Next" Click="OnNextClicked" Margin="2"/>
+            <Button Content="Previous" Click="OnPreviousClicked" Margin="2"/>
+        </StackPanel>
+        <DataGrid ItemsSource="{Binding}" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="tradeId" Width="*" Binding="{Binding tradeId}"/>
+                <DataGridTextColumn Header="buyerFirm" Width="*" Binding="{Binding buyerFirm}"/>
+                <DataGridTextColumn Header="currency" Width="*" Binding="{Binding currency}"/>
+                <DataGridTextColumn Header="executionTime" Width="*" Binding="{Binding executionTime}"/>
+                <DataGridTextColumn Header="media" Width="*" Binding="{Binding media}"/>
+                <DataGridTextColumn Header="price" Width="*" Binding="{Binding price}"/>
+                <DataGridTextColumn Header="productName" Width="*" Binding="{Binding productName}"/>
+                <DataGridTextColumn Header="productType" Width="*" Binding="{Binding productType}"/>
+                <DataGridTextColumn Header="quantity" Width="*" Binding="{Binding quantity}"/>
+                <DataGridTextColumn Header="sellerFirm" Width="*" Binding="{Binding sellerFirm}"/>
+                <DataGridTextColumn Header="side" Width="*" Binding="{Binding side}"/>
+                <DataGridTextColumn Header="status" Width="*" Binding="{Binding status}"/>
+                <DataGridTextColumn Header="submitTime" Width="*" Binding="{Binding submitTime}"/>
+                <DataGridTextColumn Header="traderId" Width="*" Binding="{Binding traders_traderId}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
 </Window>
