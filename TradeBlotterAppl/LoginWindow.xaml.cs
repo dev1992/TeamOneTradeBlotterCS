@@ -37,18 +37,6 @@ namespace TradeBlotterAppl
             string username = txtUserName.Text;
             string password = txtPassword.Password;
             var client = new WebClient();
-            //string url = "http://10.87.226.147:8080/TeamOneTradeBlotterWeb/rest/traders/signin?username=" + userName + "&password=" + password;
-            //string response = user.DownloadString(url);
-
-            //if (response=="true")
-            //{
-            //    MainWindow userLog = new MainWindow();
-            //    bool? result1 = userLog.ShowDialog();
-            //}
-            //else
-            //{
-            //    MessageBox.Show(response);
-            //}
             string naam;
             using (client)
             {
@@ -62,8 +50,9 @@ namespace TradeBlotterAppl
                     MainWindow userLog = new MainWindow();
                     //FilterWindow filterWindowFilter = new FilterWindow();
                     naam = txtUserName.Text;
-                    //userLog.lstUserName.Items.Add(naam);
+                    userLog.lstUserName.Items.Add(naam);
                     bool? result1 = userLog.ShowDialog();
+                    
                 }
                 else
                 {
@@ -78,6 +67,16 @@ namespace TradeBlotterAppl
         {
             SignUpWindow newUserAdd = new SignUpWindow();
             bool? resultLoginAttempt = newUserAdd.ShowDialog();
+        }
+
+        private void sendToBack(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void txtUserName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

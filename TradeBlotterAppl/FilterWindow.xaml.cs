@@ -24,6 +24,7 @@ namespace TradeBlotterAppl
     public partial class FilterWindow : Window
     {
         String[] FilterType = new string[10];
+
         public FilterWindow()
         {
             InitializeComponent();
@@ -37,16 +38,21 @@ namespace TradeBlotterAppl
         private void filterBlotter(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
-            string filterType;
+            string filterValue;
             switch (comboFilterName.SelectedIndex)
             { 
                 case 0:
-                    filterType = txtFurtherFilter.Text;
+                    filterValue = txtFurtherFilter.Text;
                     //var client = new WebClient();
-                    urlFilter = "http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?" + "productType=" + filterType;
+                    urlFilter = "http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?" + "productType=" + filterValue;
                     //var response = client.DownloadString(urlFilter);
                     break;
                 case 1:
+                    filterValue = txtFurtherFilter.Text;
+                    //var client = new WebClient();
+                    urlFilter = "http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbyname?" + "productName=" + filterValue;
+                    //var response = client.DownloadString(urlFilter);
+                    break;
                 case 2:
                 case 3:
                 case 4:

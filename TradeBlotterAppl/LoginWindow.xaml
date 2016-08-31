@@ -6,20 +6,22 @@
         xmlns:local="clr-namespace:TradeBlotterAppl"
         mc:Ignorable="d"
         Title="LoginWindow" 
-        Height="400" 
-        Width="500"
-        Left="450"
-        Top="100">
-    <Canvas Margin="0,0,2,-4">
-        <Label x:Name="label1" Content="Password" HorizontalAlignment="Left" Margin="33,87,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label" Content="User Name" HorizontalAlignment="Left" Margin="24,31,0,0" VerticalAlignment="Top"/>
-        <Image x:Name="loginWindow_jpg" Height="394" Source="loginWindow.jpg" Stretch="Fill" Width="507"/>
-        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" Canvas.Left="205" Canvas.Top="161"/>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="195" Canvas.Top="204" Canvas.Left="205"/>
-        <Button x:Name="btnLogin" Content="Login" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Click="PageAction" Canvas.Left="241" Canvas.Top="248" Height="31"/>
+        Height="600" 
+        Width="1200"
+        Left="80"
+        Top="100" Topmost="False">
 
-        
-        <Button x:Name="button" Content="Sign Up" Canvas.Left="379" Canvas.Top="40" Width="101" Height="25" Click="goToSignUp"/>
+    <Canvas Margin="0,0,2,-4">
+        <Image x:Name="Login_png" Height="662" Source="Login.png" Stretch="Fill" Width="1190" Canvas.Top="-42"/>
+
+        <Label x:Name="label1" Content="Password" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="408" Canvas.Top="376" Width="114" Height="46"/>
+        <Label x:Name="label" Content="User Name" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="408" Canvas.Top="300" Height="47" Width="114"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Canvas.Left="527" Canvas.Top="300" TextChanged="txtUserName_TextChanged"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="278" Canvas.Top="376" Canvas.Left="527"/>
+        <Button x:Name="btnLogin" Content="Login" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Click="PageAction" Canvas.Left="527" Canvas.Top="432" Height="31" RenderTransformOrigin="1.302,2.129"/>
+
+
+        <Button x:Name="button" Content="Sign Up" Canvas.Left="643" Canvas.Top="486" Width="205" Height="43" Click="goToSignUp"/>
 
     </Canvas>
 </Window>

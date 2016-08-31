@@ -66,3 +66,5 @@ C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug
 C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\SignUpWindow.baml
 C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\FilterWindow.g.cs
 C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\FilterWindow.baml
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\FilteredResult.g.cs
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\FilteredResult.baml

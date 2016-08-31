@@ -66,30 +66,29 @@ namespace TradeBlotterAppl
         private void filterEvent(object sender, RoutedEventArgs e)
         {
             FilterWindow filterWindow = new FilterWindow();
-            //naam = txtUserName.Text;
-            //userLog.lstUserName.Items.Add(naam);
+            
             bool? result1 = filterWindow.ShowDialog();
             if (result1 == true)
             {
                 MessageBox.Show(filterWindow.urlReturn().ToString());
                 WebClient webClient = new WebClient();
                 Stream data = webClient.OpenRead(filterWindow.urlReturn().ToString());
-                //Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?productType=fx");
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
                 TradeData[] other = (TradeData[])serializer.ReadObject(data);
-                string msg = "";
-                foreach (TradeData acc in other)
-                {
-                    msg += acc.ToString() + System.Environment.NewLine;
 
-                }
-                //dataTrade.Items.Refresh();
-                //dataTrade.ItemsSource = other;
+                FilteredResult filteredWindowResult = new FilteredResult(other);
+                bool? result2 = filteredWindowResult.ShowDialog();
+                //filteredWindowResult.dataFilterredTrade.ItemsSource = other;
             }
             else
             {
 
             }
+
+        }
+
+        private void lstUserName_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
 
