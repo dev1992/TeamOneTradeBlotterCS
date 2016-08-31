@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,12 +28,35 @@ namespace TradeBlotterAppl
         {
             InitializeComponent();
         }
+        public string urlReturn()
+        {
+            return urlFilter;
+        }
+        public  string urlFilter;
 
         private void filterBlotter(object sender, RoutedEventArgs e)
         {
-            //string itemToBeFiltered = comboFilterName.SelectedItem as string;
-            MessageBox.Show(comboFilterName.SelectedItem.ToString());
-        }
+            DialogResult = true;
+            string filterType;
+            switch (comboFilterName.SelectedIndex)
+            { 
+                case 0:
+                    filterType = txtFurtherFilter.Text;
+                    //var client = new WebClient();
+                    urlFilter = "http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?" + "productType=" + filterType;
+                    //var response = client.DownloadString(urlFilter);
+                    break;
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                    break;
+            }
+
+            
+    }
 
         private void whenLoaded(object sender, RoutedEventArgs e)
         {
@@ -44,20 +71,9 @@ namespace TradeBlotterAppl
             comboFilterName.SelectedIndex = 0;
         }
 
-        private void furtherClassification(object sender, RoutedEventArgs e)
+        private void cancelEvent(object sender, RoutedEventArgs e)
         {
-            switch (comboFilterName.SelectedIndex)
-            {
-                case 0:
-
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                    break;
-            }
+            DialogResult = false;
         }
     }
 }

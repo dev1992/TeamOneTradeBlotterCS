@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:TradeBlotterAppl"
         mc:Ignorable="d"
         Title="FilterWindow" Height="300" Width="300" Loaded="whenLoaded">
-    <Canvas>
+    <Canvas Margin="0,0,0,2">
         <ComboBox x:Name="comboFilterName" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Canvas.Left="47" Canvas.Top="43">
 
         </ComboBox>
-        <Button x:Name="btnFilter" Content="Filter" Canvas.Left="204" Canvas.Top="208" Width="75" Click="filterBlotter"/>
+        <Button x:Name="btnFilter" Content="Filter" Canvas.Left="47" Canvas.Top="167" Width="75" Click="filterBlotter"/>
         <Label x:Name="label" FontWeight="Bold" Content="Filter By: " Canvas.Left="47" Canvas.Top="15" Width="79" Height="28"/>
-        <Button x:Name="button" Content="Go" Canvas.Left="204" Canvas.Top="43" Width="49" Click="furtherClassification"/>
-        <TextBox x:Name="txtProductType" Height="23" Canvas.Left="61" TextWrapping="Wrap" Text="" Canvas.Top="94" Width="120"/>
+        <TextBox x:Name="txtFurtherFilter" Height="23" Canvas.Left="47" TextWrapping="Wrap" Text="" Canvas.Top="105" Width="120"/>
+        <Button x:Name="button" Content="Cancel" Canvas.Left="167" Canvas.Top="167" Width="75" Click="cancelEvent"/>
 
     </Canvas>
 </Window>

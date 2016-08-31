@@ -56,6 +56,7 @@ namespace TradeBlotterAppl
                 if(str=="true")
                 {
                     MainWindow userLog = new MainWindow();
+                    //FilterWindow filterWindowFilter = new FilterWindow();
                      naam=txtUserName.Text;
                     userLog.lstUserName.Items.Add(naam);
                     bool? result1 = userLog.ShowDialog();

@@ -24,6 +24,7 @@ namespace TradeBlotterAppl
     /// </summary>
     public partial class MainWindow : Window
     {
+        string urlFilter;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,18 +34,16 @@ namespace TradeBlotterAppl
         {
             WebClient webClient = new WebClient();
             Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades");
+            //Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?productType=FX");
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
             TradeData[] other = (TradeData[])serializer.ReadObject(data);
             string msg = "";
             foreach (TradeData acc in other)
             {
-                msg += acc.ToString() + acc.GetTradeSide+acc.GetTradeMedia+System.Environment.NewLine;
+                msg += acc.ToString() +System.Environment.NewLine;
 
             }
             dataTrade.ItemsSource = other;
-           /* LoginWindow login = new LoginWindow();
-            string username = login.txtUserName.Text;
-            lstUserName.Items.Add(username) ;*/
         }
 
         private void filterTradeBlotter(object sender, RoutedEventArgs e)
@@ -53,6 +52,28 @@ namespace TradeBlotterAppl
             //naam = txtUserName.Text;
             //userLog.lstUserName.Items.Add(naam);
             bool? result1 = filterWindow.ShowDialog();
+            if (result1==true)
+            {
+                MessageBox.Show(filterWindow.urlReturn().ToString());
+                WebClient webClient = new WebClient();
+                Stream data = webClient.OpenRead(filterWindow.urlReturn().ToString());
+                //Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?productType=fx");
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
+                TradeData[] other = (TradeData[])serializer.ReadObject(data);
+                string msg = "";
+                foreach (TradeData acc in other)
+                {
+                    msg += acc.ToString() +  System.Environment.NewLine;
+
+                }
+                dataTrade.Items.Refresh();
+                dataTrade.ItemsSource = other;
+            }
+            else
+            {
+
+            }
+            
         }
     }
 }

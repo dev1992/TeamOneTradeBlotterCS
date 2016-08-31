@@ -12,26 +12,26 @@ namespace TradeBlotterAppl
     [DataContract]
     public class TradeData
     {
-        public enum TradeSide { Buy, Sell}
-        //[DataMember]
-        public  TradeSide GetTradeSide{ get {
-                if (side == true)
-                    return TradeSide.Sell;
-                else
-                    return TradeSide.Buy;
-            } }
-        public enum TradeMedia { Voice,Electronic }
-        //[DataMember]
-        public TradeMedia GetTradeMedia
-        {
-            get
-            {
-                if (media == true)
-                    return TradeMedia.Electronic;
-                else
-                    return TradeMedia.Voice;
-            }
-        }
+        //public enum TradeSide { Buy, Sell}
+        ////[DataMember]
+        //public  TradeSide GetTradeSide{ get {
+        //        if (side == true)
+        //            return TradeSide.Sell;
+        //        else
+        //            return TradeSide.Buy;
+        //    } }
+        //public enum TradeMedia { Voice,Electronic }
+        ////[DataMember]
+        //public TradeMedia GetTradeMedia
+        //{
+        //    get
+        //    {
+        //        if (media == true)
+        //            return TradeMedia.Electronic;
+        //        else
+        //            return TradeMedia.Voice;
+        //    }
+        //}
         [DataMember]
         public int tradeID { get; set; }
         [DataMember]
