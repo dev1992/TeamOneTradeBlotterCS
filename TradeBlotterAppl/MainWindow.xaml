@@ -14,7 +14,7 @@
         <Image x:Name="loginImage_png" Height="52" Source="loginImage.png" Stretch="Fill" Width="73" Canvas.Left="10" Canvas.Top="10" RenderTransformOrigin="0.521,0.692"/>
 
 
-        <DataGrid x:Name="dataTrade"  Canvas.Left="30" Canvas.Top="200" Height="auto" Width="auto"/>
+        <DataGrid x:Name="dataTrade"  Canvas.Left="30" Canvas.Top="200" Height="350" Width="auto"/>
         <ListBox x:Name="lstUserName" FontWeight="Bold" FontStretch="Normal" FontSize="20" BorderBrush="White"   Height="52" Canvas.Left="100" Canvas.Top="10" Width="134"/>
         <Button x:Name="button" Content="Filter" Canvas.Left="204" Canvas.Top="90" Width="133" Height="44" Click="filterTradeBlotter"/>
         <Button x:Name="button1" Content="Message Box" Canvas.Left="424" Canvas.Top="90" Width="133" Height="44"/>

@@ -38,11 +38,12 @@ namespace TradeBlotterAppl
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
             TradeData[] other = (TradeData[])serializer.ReadObject(data);
             string msg = "";
-            foreach (TradeData acc in other)
-            {
-                msg += acc.ToString() +System.Environment.NewLine;
 
-            }
+            ////foreach (TradeData acc in other)
+            ////{
+            ////    msg += acc.ToString() +System.Environment.NewLine;
+
+            ////}
             dataTrade.ItemsSource = other;
         }
 
