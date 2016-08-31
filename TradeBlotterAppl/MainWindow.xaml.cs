@@ -48,7 +48,7 @@ namespace TradeBlotterAppl
 
             this._cview = new PagingCollectionView(
                 other,
-                25
+                15
             );
             this.DataContext = this._cview;
         }
@@ -61,6 +61,36 @@ namespace TradeBlotterAppl
         private void OnPreviousClicked(object sender, RoutedEventArgs e)
         {
             this._cview.MoveToPreviousPage();
+        }
+
+        private void filterEvent(object sender, RoutedEventArgs e)
+        {
+            FilterWindow filterWindow = new FilterWindow();
+            //naam = txtUserName.Text;
+            //userLog.lstUserName.Items.Add(naam);
+            bool? result1 = filterWindow.ShowDialog();
+            if (result1 == true)
+            {
+                MessageBox.Show(filterWindow.urlReturn().ToString());
+                WebClient webClient = new WebClient();
+                Stream data = webClient.OpenRead(filterWindow.urlReturn().ToString());
+                //Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?productType=fx");
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
+                TradeData[] other = (TradeData[])serializer.ReadObject(data);
+                string msg = "";
+                foreach (TradeData acc in other)
+                {
+                    msg += acc.ToString() + System.Environment.NewLine;
+
+                }
+                //dataTrade.Items.Refresh();
+                //dataTrade.ItemsSource = other;
+            }
+            else
+            {
+
+            }
+
         }
 
         //private void ReadAPI(object sender, RoutedEventArgs e)
@@ -107,7 +137,7 @@ namespace TradeBlotterAppl
         //    {
 
         //    }
-            
+
         //}
 
     }

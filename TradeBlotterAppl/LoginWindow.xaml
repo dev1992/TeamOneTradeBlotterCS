@@ -16,7 +16,7 @@
         <Image x:Name="loginWindow_jpg" Height="394" Source="loginWindow.jpg" Stretch="Fill" Width="507"/>
         <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" Canvas.Left="205" Canvas.Top="161"/>
         <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="195" Canvas.Top="204" Canvas.Left="205"/>
-        <Button x:Name="btnLogin" Content="Page" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Click="PageAction" Canvas.Left="241" Canvas.Top="248" Height="31"/>
+        <Button x:Name="btnLogin" Content="Login" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Click="PageAction" Canvas.Left="241" Canvas.Top="248" Height="31"/>
 
         
         <Button x:Name="button" Content="Sign Up" Canvas.Left="379" Canvas.Top="40" Width="101" Height="25" Click="goToSignUp"/>

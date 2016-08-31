@@ -12,6 +12,7 @@ namespace TradeBlotterAppl
     [DataContract]
     public class TradeData
     {
+
         private bool side { get; set; }
         private bool media { get; set; }
         [DataMember]

@@ -15,8 +15,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <Label Grid.Row="0" Margin="2">
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="448,485,-82,43">
+            <Label Grid.Row="0" Margin="5">
                 <Label.Content>
                     <Binding Path="CurrentPage">
                         <Binding.StringFormat>Current Page: {0}</Binding.StringFormat>
@@ -26,23 +26,24 @@
             <Button Content="Next" Click="OnNextClicked" Margin="2"/>
             <Button Content="Previous" Click="OnPreviousClicked" Margin="2"/>
         </StackPanel>
-        <DataGrid ItemsSource="{Binding}" Grid.Row="1">
+        <DataGrid ItemsSource="{Binding}" Grid.Row="1" Margin="44,130,238,90">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="tradeId" Width="*" Binding="{Binding tradeId}"/>
                 <DataGridTextColumn Header="buyerFirm" Width="*" Binding="{Binding buyerFirm}"/>
                 <DataGridTextColumn Header="currency" Width="*" Binding="{Binding currency}"/>
                 <DataGridTextColumn Header="executionTime" Width="*" Binding="{Binding executionTime}"/>
-                <DataGridTextColumn Header="media" Width="*" Binding="{Binding media}"/>
+                
                 <DataGridTextColumn Header="price" Width="*" Binding="{Binding price}"/>
                 <DataGridTextColumn Header="productName" Width="*" Binding="{Binding productName}"/>
                 <DataGridTextColumn Header="productType" Width="*" Binding="{Binding productType}"/>
                 <DataGridTextColumn Header="quantity" Width="*" Binding="{Binding quantity}"/>
                 <DataGridTextColumn Header="sellerFirm" Width="*" Binding="{Binding sellerFirm}"/>
-                <DataGridTextColumn Header="side" Width="*" Binding="{Binding side}"/>
+                
                 <DataGridTextColumn Header="status" Width="*" Binding="{Binding status}"/>
                 <DataGridTextColumn Header="submitTime" Width="*" Binding="{Binding submitTime}"/>
                 <DataGridTextColumn Header="traderId" Width="*" Binding="{Binding traders_traderId}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="button" Content="Filter" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" Margin="1014,130,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="36" Click="filterEvent"/>
     </Grid>
 </Window>
