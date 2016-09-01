@@ -29,20 +29,128 @@
         </StackPanel>
         <DataGrid Name="dataTrade" ItemsSource="{Binding}" Grid.Row="1" Margin="44,130,48,90">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="tradeId" Width="*" Binding="{Binding tradeId}"/>
-                <DataGridTextColumn Header="buyerFirm" Width="*" Binding="{Binding buyerFirm}"/>
-                <DataGridTextColumn Header="currency" Width="*" Binding="{Binding currency}"/>
-                <DataGridTextColumn Header="executionTime" Width="*" Binding="{Binding executionTime}"/>
+                <DataGridTextColumn Header="ID" Width="*" Binding="{Binding tradeId}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
 
-                <DataGridTextColumn Header="price" Width="*" Binding="{Binding price}"/>
-                <DataGridTextColumn Header="productName" Width="*" Binding="{Binding productName}"/>
-                <DataGridTextColumn Header="productType" Width="*" Binding="{Binding productType}"/>
-                <DataGridTextColumn Header="quantity" Width="*" Binding="{Binding quantity}"/>
-                <DataGridTextColumn Header="sellerFirm" Width="*" Binding="{Binding sellerFirm}"/>
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
 
-                <DataGridTextColumn Header="status" Width="*" Binding="{Binding status}"/>
-                <DataGridTextColumn Header="submitTime" Width="*" Binding="{Binding submitTime}"/>
-                <DataGridTextColumn Header="traderId" Width="*" Binding="{Binding traders_traderId}"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="buyerFirm" Width="*" Binding="{Binding buyerFirm}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="currency" Width="*" Binding="{Binding currency}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="executionTime" Width="150" Binding="{Binding executionTime}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="price" Width="*" Binding="{Binding price}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="productName" Width="*" Binding="{Binding productName}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="productType" Width="*" Binding="{Binding productType}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="quantity" Width="*" Binding="{Binding quantity}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="sellerFirm" Width="*" Binding="{Binding sellerFirm}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="status" Width="*" Binding="{Binding status}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="submitTime" Width="150" Binding="{Binding submitTime}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="traderId" Width="*" Binding="{Binding traders_traderId}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="White" />
+
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="button" Content="Search" Background="LightGray" FontWeight="Regular" FontSize="15" HorizontalAlignment="Left" Margin="76,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="27" Click="filterEvent" RenderTransformOrigin="0.727,1.29"/>

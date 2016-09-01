@@ -14,8 +14,8 @@
     <Canvas Margin="0,0,2,-4">
         <Image x:Name="LoginMain_png" Height="880" Source="LoginMain.png" Stretch="Fill" Width="1216" Canvas.Top="-46"/>
 
-        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Canvas.Left="463" Canvas.Top="330" TextChanged="txtUserName_TextChanged"/>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="278" Canvas.Top="399" Canvas.Left="463"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Canvas.Left="463" Canvas.Top="330" TextChanged="txtUserName_TextChanged" FontSize="20" TextAlignment="Center"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Center" Height="46" VerticalAlignment="Top" Width="278" Canvas.Top="399" Canvas.Left="463" FontSize="20" HorizontalContentAlignment="Center"/>
         <Button x:Name="btnLogin" Content="Login" Foreground="gray" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Click="PageAction" Canvas.Left="540" FontSize="15" Canvas.Top="478" Height="35" RenderTransformOrigin="1.302,2.129"/>
 
 
