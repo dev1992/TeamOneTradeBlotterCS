@@ -37,9 +37,12 @@
                     <DataGridTextColumn Header="mailBody" Width="*" Binding="{Binding mailBody}"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <TextBox x:Name="txtMailID" HorizontalAlignment="Left" Height="45" Margin="984,140,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-            <TextBox x:Name="txtEmailBody" HorizontalAlignment="Left" Height="91" Margin="984,223,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-            <Button x:Name="button" Content="Send" HorizontalAlignment="Left" Margin="1030,380,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Height="40" Click="sendingEmail"  />
+            <TextBox x:Name="txtMailID" HorizontalAlignment="Left" Height="45" Margin="984,161,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+            <TextBox x:Name="txtEmailBody" HorizontalAlignment="Left" Height="91" Margin="984,271,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+            <Button x:Name="button" Content="Send" HorizontalAlignment="Left" Margin="1030,414,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Height="40" Click="sendingEmail"  />
+            <Label x:Name="label" Content="Your Mails" HorizontalAlignment="Left" Margin="125,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="164" Height="24"/>
+            <Label x:Name="label1" Content="Enter user name" HorizontalAlignment="Left" Margin="984,121,0,0" Grid.Row="1" VerticalAlignment="Top" Width="104" Height="31"/>
+            <Label x:Name="label2" Content="enter the mail body" HorizontalAlignment="Left" Margin="984,234,0,0" Grid.Row="1" VerticalAlignment="Top" Width="104"/>
         </Grid>
 
 

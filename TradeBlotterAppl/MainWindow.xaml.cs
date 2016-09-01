@@ -139,9 +139,12 @@ namespace TradeBlotterAppl
             string[] words1 = dateStr1.Split(' ');
             string[] splits1 = words1[0].Split('/');
 
+            MessageBox.Show(splits1.Length.ToString());
+
             string dateStr2 = eDate.ToString();
             string[] words2 = dateStr2.Split(' ');
             string[] splits2 = words2[0].Split('/');
+            MessageBox.Show(splits2.Length.ToString());
 
             string query = "startDate=" +splits1[2] + "-" + splits1[1] + "-" + splits1[0] + "&endDate=" + splits2[2] + "-" + splits2[1] + "-" + splits2[0];
             MessageBox.Show(query);
@@ -165,7 +168,28 @@ namespace TradeBlotterAppl
 
         private void writeNotes(object sender, RoutedEventArgs e)
         {
+            WebClient webClient3 = new WebClient();
 
+            Stream data = webClient3.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/notes");
+            List<Notes> notes;
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Notes>));
+
+           notes=  (List<Notes>)serializer.ReadObject(data);
+            string showNotes = "";
+            foreach (Notes not in notes)
+            {
+                showNotes += notes.ToString() + "\n";
+            }
+
+            noteWindow userwindow = new noteWindow();
+            userwindow.dataNotesGrid.ItemsSource = showNotes;
+            bool? result = userwindow.ShowDialog();
+
+        }
+
+        private void loggingOut(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 

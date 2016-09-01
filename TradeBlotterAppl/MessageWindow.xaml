@@ -37,8 +37,10 @@
             </DataGrid>
             <ListBox x:Name="topicBox" HorizontalAlignment="Left" Height="33" Margin="44,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="231"/>
             <TextBox x:Name="txtMessageBox" HorizontalAlignment="Left" Height="125" Margin="962,140,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
-            <TextBox x:Name="txtSubjectType" HorizontalAlignment="Left" Height="51" Margin="1011,303,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="123"/>
-            <Button x:Name="button" Content="Send Message" HorizontalAlignment="Left" Margin="1018,386,0,0" Grid.Row="1" VerticalAlignment="Top" Width="116" Height="40" Click="sendingMessage"/>
+            <TextBox x:Name="txtSubjectType" HorizontalAlignment="Left" Height="51" Margin="1011,351,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="123"/>
+            <Button x:Name="button" Content="Send Message" HorizontalAlignment="Left" Margin="1018,440,0,0" Grid.Row="1" VerticalAlignment="Top" Width="116" Height="40" Click="sendingMessage"/>
+            <Label x:Name="label" Content="Enter the Message" HorizontalAlignment="Left" Margin="1018,80,0,0" Grid.Row="1" VerticalAlignment="Top" Height="60" Width="139"/>
+            <Label x:Name="label1" Content="Enter the subject" HorizontalAlignment="Left" Margin="1018,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="42" Width="116"/>
         </Grid>
 
 

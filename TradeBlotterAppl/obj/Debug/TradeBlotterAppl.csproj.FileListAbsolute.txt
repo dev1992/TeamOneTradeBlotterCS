@@ -136,3 +136,5 @@ C:\Users\Grad11\project\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\UserSpe
 C:\Users\Grad11\project\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.g.resources
 C:\Users\Grad11\project\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.Properties.Resources.resources
 C:\Users\Grad11\project\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\TradeBlotterAppl.csproj.GenerateResource.Cache
+C:\Users\Grad11\project\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\noteWindow.g.cs
+C:\Users\Grad11\project\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\noteWindow.baml
