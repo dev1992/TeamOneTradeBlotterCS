@@ -35,6 +35,7 @@
                     <DataGridTextColumn Header="messageBody" Width="*" Binding="{Binding messageBody}"/>
                 </DataGrid.Columns>
             </DataGrid>
+            <ListBox x:Name="topicBox" HorizontalAlignment="Left" Height="33" Margin="44,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="231"/>
         </Grid>
 
 

@@ -24,13 +24,15 @@
                         </Binding>
                     </Label.Content>
                 </Label>
-                <Button Content="Next" Click="OnNextClicked" Margin="2"/>
+
                 <Button Content="Previous" Click="OnPreviousClicked" Margin="2"/>
+                <Button Content="Next" Click="OnNextClicked" Margin="2"/>
+                
             </StackPanel>
             <DataGrid Name="messages" ItemsSource="{Binding}" Grid.Row="1" Margin="44,130,238,90">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="mailId" Width="*" Binding="{Binding mailId}"/>
-                    <DataGridTextColumn Header="creator" Width="*" Binding="{Binding traders_traderId}"/>
+                    <DataGridTextColumn Header="creator" Width="*" Binding="{Binding CreatorName}"/>
+                    <DataGridTextColumn Header="trader" Width="*" Binding="{Binding traders_traderId}"/>
                     <DataGridTextColumn Header="receiver" Width="*" Binding="{Binding receiverId}"/>
                     <DataGridTextColumn Header="mailBody" Width="*" Binding="{Binding mailBody}"/>
                 </DataGrid.Columns>

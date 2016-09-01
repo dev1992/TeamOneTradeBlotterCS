@@ -112,6 +112,7 @@ namespace TradeBlotterAppl
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(MessageData[]));
 
             MessageData[] other = (MessageData[])serializer.ReadObject(data);
+            
             MessageWindow userwindow = new MessageWindow(other);
             bool? result = userwindow.ShowDialog();
         }
@@ -126,6 +127,12 @@ namespace TradeBlotterAppl
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(EmailData[]));
 
             EmailData[] other = (EmailData[])serializer.ReadObject(data);
+
+            foreach(EmailData email in other)
+            {
+                Stream user_data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/traders/getTrader?userId="+email.receiverId.ToString());
+            }
+            
             EmailWindow userwindow = new EmailWindow(other);
             bool? result = userwindow.ShowDialog();
         }

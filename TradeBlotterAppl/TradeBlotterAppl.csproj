@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="TradeData.cs" />
     <Compile Include="TradePK.cs" />
+    <Compile Include="TraderData.cs" />
     <Compile Include="UserSpecificWindow.xaml.cs">
       <DependentUpon>UserSpecificWindow.xaml</DependentUpon>
     </Compile>
