@@ -27,7 +27,7 @@
                 <Button Content="Next" Click="OnNextClicked" Margin="2"/>
                 <Button Content="Previous" Click="OnPreviousClicked" Margin="2"/>
             </StackPanel>
-            <DataGrid Name="messages" ItemsSource="{Binding}" Grid.Row="1" Margin="44,130,238,90">
+            <DataGrid Name="messages" ItemsSource="{Binding}" Grid.Row="1" Margin="10,85,269,90">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="messageId" Width="*" Binding="{Binding messageId}"/>
                     <DataGridTextColumn Header="messageId" Width="*" Binding="{Binding traders_traderId}"/>
@@ -36,6 +36,9 @@
                 </DataGrid.Columns>
             </DataGrid>
             <ListBox x:Name="topicBox" HorizontalAlignment="Left" Height="33" Margin="44,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="231"/>
+            <TextBox x:Name="txtMessageBox" HorizontalAlignment="Left" Height="125" Margin="962,140,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
+            <TextBox x:Name="txtSubjectType" HorizontalAlignment="Left" Height="51" Margin="1011,303,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="123"/>
+            <Button x:Name="button" Content="Send Message" HorizontalAlignment="Left" Margin="1018,386,0,0" Grid.Row="1" VerticalAlignment="Top" Width="116" Height="40" Click="sendingMessage"/>
         </Grid>
 
 

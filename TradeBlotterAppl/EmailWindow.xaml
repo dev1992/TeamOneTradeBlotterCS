@@ -29,7 +29,7 @@
                 <Button Content="Next" Click="OnNextClicked" Margin="2" RenderTransformOrigin="2.065,0.453" Width="52"/>
 
             </StackPanel>
-            <DataGrid Name="messages" ItemsSource="{Binding}" Grid.Row="1" Margin="139,77,143,143">
+            <DataGrid Name="messages" ItemsSource="{Binding}" Grid.Row="1" Margin="41,89,303,90">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="creator" Width="*" Binding="{Binding CreatorName}"/>
                     <DataGridTextColumn Header="trader" Width="*" Binding="{Binding traders_traderId}"/>
@@ -37,6 +37,9 @@
                     <DataGridTextColumn Header="mailBody" Width="*" Binding="{Binding mailBody}"/>
                 </DataGrid.Columns>
             </DataGrid>
+            <TextBox x:Name="txtMailID" HorizontalAlignment="Left" Height="45" Margin="984,140,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+            <TextBox x:Name="txtEmailBody" HorizontalAlignment="Left" Height="91" Margin="984,223,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+            <Button x:Name="button" Content="Send" HorizontalAlignment="Left" Margin="1030,380,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Height="40" Click="sendingEmail"  />
         </Grid>
 
 

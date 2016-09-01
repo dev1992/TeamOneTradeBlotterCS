@@ -43,7 +43,7 @@ namespace TradeBlotterAppl
                 var values = new NameValueCollection();
                 values["username"] = username;
                 values["password"] = password;
-                var res = client.UploadValues("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/traders/signinsecure", values);
+                var res = client.UploadValues("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/traders/signinsecure", values);
                 var str = Encoding.Default.GetString(res);
                 if (str == "true")
                 {

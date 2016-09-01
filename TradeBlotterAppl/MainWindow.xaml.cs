@@ -38,7 +38,7 @@ namespace TradeBlotterAppl
 
             WebClient webClient = new WebClient();
             webClient.Proxy = null;
-            Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/trades");
+            Stream data = webClient.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/trades");
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
             TradeData[] other = (TradeData[])serializer.ReadObject(data);
 
@@ -92,7 +92,7 @@ namespace TradeBlotterAppl
                 WebClient webClient = new WebClient();
                 webClient.Proxy = null;
 
-                Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbyuser?userName=user2");
+                Stream data = webClient.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbyuser?userName=user2");
 
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
 
@@ -107,7 +107,7 @@ namespace TradeBlotterAppl
             WebClient webClient = new WebClient();
             webClient.Proxy = null;
 
-            Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/messages/bytopic?productType=fx");
+            Stream data = webClient.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/messages/bytopic?productType=fx");
 
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(MessageData[]));
 
@@ -122,7 +122,7 @@ namespace TradeBlotterAppl
             WebClient webClient = new WebClient();
             webClient.Proxy = null;
 
-            Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/mails/ofuser?userName=user1");
+            Stream data = webClient.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/mails/ofuser?userName=user1");
 
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(EmailData[]));
 
@@ -149,13 +149,23 @@ namespace TradeBlotterAppl
             WebClient webClient = new WebClient();
             webClient.Proxy = null;
 
-            Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbydate?"+query);
+            Stream data = webClient.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbydate?"+query);
 
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
 
             TradeData[] other = (TradeData[])serializer.ReadObject(data);
             DateWindow userwindow = new DateWindow(other);
             bool? result = userwindow.ShowDialog();
+        }
+
+        private void calculator(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc.exe");
+        }
+
+        private void writeNotes(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 

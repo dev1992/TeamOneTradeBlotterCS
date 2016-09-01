@@ -21,6 +21,7 @@ using System.Runtime.Serialization.Json;
 
 using System.Collections;
 using System.ComponentModel;
+using System.Collections.Specialized;
 
 namespace TradeBlotterAppl
 {
@@ -29,6 +30,9 @@ namespace TradeBlotterAppl
     /// </summary>
     public partial class EmailWindow : Window
     {
+        public string emailReceiver;
+        public string emailContent;
+        public string emailSender = "user1";
         private readonly PagingCollectionViewEmail _cview;
         public EmailWindow(EmailData[] other)
         {
@@ -58,6 +62,22 @@ namespace TradeBlotterAppl
             this.Title = selected.Header.ToString();
         }
 
+        private void sendingEmail(object sender, RoutedEventArgs e)
+        {
+            emailContent = txtEmailBody.Text;
+            emailReceiver = txtMailID.Text;
+            var client = new WebClient();
+            using (client)
+            {
+                var values = new NameValueCollection();
+                values["mailBody"] = emailContent;
+                values["sender"] = emailSender;
+                values["receiver"] = emailReceiver;
+                var res = client.UploadValues("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/mails/send", values);
+                var str = Encoding.Default.GetString(res);
+
+            }
+        }
     }
 
     // ===================

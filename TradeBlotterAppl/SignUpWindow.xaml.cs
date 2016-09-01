@@ -40,7 +40,7 @@ namespace TradeBlotterAppl
                 values["password"] = newPassword;
                 values["firstName"] = newUsername;
                 values["lastName"] = newUsername;
-                var res = client.UploadValues("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/traders/registersecure", values);
+                var res = client.UploadValues("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/traders/registersecure", values);
             }
             this.Close();
          }

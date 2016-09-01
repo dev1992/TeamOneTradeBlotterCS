@@ -163,5 +163,7 @@
         <DatePicker x:Name="endDate" HorizontalAlignment="Left" Margin="332,14,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Button x:Name="resultByFilterDate" Content="Filter By Date" HorizontalAlignment="Left" Margin="462,14,0,0" Grid.Row="1" VerticalAlignment="Top" Width="111" Click="getResultsByDateFilter" Height="24"/>
         <Button x:Name="profileButton" Content="My Profile" HorizontalAlignment="Left" Margin="974,14,0,0" Grid.Row="1" VerticalAlignment="Top"  Background="Transparent" Width="170" Click="ToUserWindow" Height="38" RenderTransformOrigin="1.212,1.553"/>
+        <Button x:Name="button1" Content="Calculator" HorizontalAlignment="Left" Margin="462,76,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="calculator"/>
+        <Button x:Name="button4" Content="NotePad" HorizontalAlignment="Left" Margin="245,92,0,0" Grid.Row="1" VerticalAlignment="Top" Width="104" Height="35" Click="writeNotes"/>
     </Grid>
 </Window>
