@@ -68,3 +68,11 @@ C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug
 C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\FilterWindow.baml
 C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\FilteredResult.g.cs
 C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\FilteredResult.baml
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\UserSpecificWindow.g.cs
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\UserSpecificWindow.baml
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\MessageWindow.g.cs
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\MessageWindow.baml
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\EmailWindow.g.cs
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\EmailWindow.baml
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\DateWindow.g.cs
+C:\Users\Grad109\blotterProject\TeamOneTradeBlotterCS\TradeBlotterAppl\obj\Debug\DateWindow.baml

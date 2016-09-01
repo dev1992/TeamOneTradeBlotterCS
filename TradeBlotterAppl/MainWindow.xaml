@@ -48,6 +48,14 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="button" Content="Filter" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" Margin="1014,130,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="44" Click="filterEvent"/>
-        <ListBox x:Name="lstUserName" HorizontalAlignment="Left" FontSize="35" BorderBrush="White" Height="48" Margin="815,52,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180"/>
+        <ListBox x:Name="lstUserName" HorizontalAlignment="Left" FontSize="35" BorderBrush="White" Height="48" Margin="815,52,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180">
+            <!--<Button x:Name="button1" Background="Transparent" Content="" Width="170" Click="ToUserWindow" Height="38"/>-->
+        </ListBox>
+        <Button x:Name="button2" Content="Emails" HorizontalAlignment="Left" Margin="92,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Background="Transparent" Height="38" Click="toEmailWindow"/>
+        <Button x:Name="button3" Content="Messages" HorizontalAlignment="Left" Margin="255,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Background="Transparent" Height="38" RenderTransformOrigin="1.2,0.136" Click="toMessageWindow"/>
+        <DatePicker x:Name="startDate" HorizontalAlignment="Left" Margin="1014,296,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <DatePicker x:Name="endDate" HorizontalAlignment="Left" Margin="1014,380,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="resultByFilterDate" Content="Button" HorizontalAlignment="Left" Margin="1014,480,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="getResultsByDateFilter"/>
+        <Button x:Name="profileButton" Content="My Profile" HorizontalAlignment="Left" Margin="420,47,0,0" Grid.Row="1" VerticalAlignment="Top"  Background="Transparent" Width="170" Click="ToUserWindow" Height="38"/>
     </Grid>
 </Window>

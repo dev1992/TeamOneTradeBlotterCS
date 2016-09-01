@@ -31,6 +31,7 @@ namespace TradeBlotterAppl
             string newUsername = txtNewUserName.Text;
             string newPassword = txtNewPassword.Password;
             var client = new WebClient();
+            client.Proxy = null;
             using (client)
             {
                 var values = new NameValueCollection();
@@ -39,7 +40,7 @@ namespace TradeBlotterAppl
                 values["password"] = newPassword;
                 values["firstName"] = newUsername;
                 values["lastName"] = newUsername;
-                var res = client.UploadValues("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/traders/registersecure", values);
+                var res = client.UploadValues("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/traders/registersecure", values);
             }
             this.Close();
          }

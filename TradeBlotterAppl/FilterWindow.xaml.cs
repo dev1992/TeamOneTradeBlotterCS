@@ -44,13 +44,13 @@ namespace TradeBlotterAppl
                 case 0:
                     filterValue = txtFurtherFilter.Text;
                     //var client = new WebClient();
-                    urlFilter = "http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?" + "productType=" + filterValue;
+                    urlFilter = "http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?" + "productType=" + filterValue;
                     //var response = client.DownloadString(urlFilter);
                     break;
                 case 1:
                     filterValue = txtFurtherFilter.Text;
                     //var client = new WebClient();
-                    urlFilter = "http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbyname?" + "productName=" + filterValue;
+                    urlFilter = "http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbyname?" + "productName=" + filterValue;
                     //var response = client.DownloadString(urlFilter);
                     break;
                 case 2:

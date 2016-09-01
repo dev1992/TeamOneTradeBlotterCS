@@ -28,13 +28,13 @@ namespace TradeBlotterAppl
             InitializeComponent();
         }
 
-       
+        public string username;
 
         private void PageAction(object sender, RoutedEventArgs e)
         {
             //MainWindow userLog = new MainWindow();
             //bool? result1 = userLog.ShowDialog();
-            string username = txtUserName.Text;
+            username = txtUserName.Text;
             string password = txtPassword.Password;
             var client = new WebClient();
             string naam;
@@ -43,7 +43,7 @@ namespace TradeBlotterAppl
                 var values = new NameValueCollection();
                 values["username"] = username;
                 values["password"] = password;
-                var res = client.UploadValues("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/traders/signinsecure", values);
+                var res = client.UploadValues("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/traders/signinsecure", values);
                 var str = Encoding.Default.GetString(res);
                 if (str == "true")
                 {

@@ -37,8 +37,8 @@ namespace TradeBlotterAppl
             // -------------------------
 
             WebClient webClient = new WebClient();
-            Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades");
-            //Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?productType=FX");
+            webClient.Proxy = null;
+            Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/trades");
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
             TradeData[] other = (TradeData[])serializer.ReadObject(data);
 
@@ -70,7 +70,7 @@ namespace TradeBlotterAppl
             bool? result1 = filterWindow.ShowDialog();
             if (result1 == true)
             {
-                MessageBox.Show(filterWindow.urlReturn().ToString());
+                //MessageBox.Show(filterWindow.urlReturn().ToString());
                 WebClient webClient = new WebClient();
                 Stream data = webClient.OpenRead(filterWindow.urlReturn().ToString());
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
@@ -78,7 +78,6 @@ namespace TradeBlotterAppl
 
                 FilteredResult filteredWindowResult = new FilteredResult(other);
                 bool? result2 = filteredWindowResult.ShowDialog();
-                //filteredWindowResult.dataFilterredTrade.ItemsSource = other;
             }
             else
             {
@@ -87,58 +86,76 @@ namespace TradeBlotterAppl
 
         }
 
-        private void lstUserName_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ToUserWindow(object sender, RoutedEventArgs e)
         {
+
+                WebClient webClient = new WebClient();
+                webClient.Proxy = null;
+
+                Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbyuser?userName=user2");
+
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
+
+                TradeData[] other = (TradeData[])serializer.ReadObject(data);
+                UserSpecificWindow userwindow = new UserSpecificWindow(other);
+                bool? result2 = userwindow.ShowDialog();
 
         }
 
-        //private void ReadAPI(object sender, RoutedEventArgs e)
-        //{
-        //    WebClient webClient = new WebClient();
-        //    Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades");
-        //    //Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?productType=FX");
-        //    DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
-        //    TradeData[] other = (TradeData[])serializer.ReadObject(data);
-        //    string msg = "";
+        private void toMessageWindow(object sender, RoutedEventArgs e)
+        {
+            WebClient webClient = new WebClient();
+            webClient.Proxy = null;
 
-        //    ////foreach (TradeData acc in other)
-        //    ////{
-        //    ////    msg += acc.ToString() +System.Environment.NewLine;
+            Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/messages/bytopic?productType=fx");
 
-        //    ////}
-        //    dataTrade.ItemsSource = other;
-        //}
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(MessageData[]));
 
-        //private void filterTradeBlotter(object sender, RoutedEventArgs e)
-        //{
-        //    FilterWindow filterWindow = new FilterWindow();
-        //    //naam = txtUserName.Text;
-        //    //userLog.lstUserName.Items.Add(naam);
-        //    bool? result1 = filterWindow.ShowDialog();
-        //    if (result1==true)
-        //    {
-        //        MessageBox.Show(filterWindow.urlReturn().ToString());
-        //        WebClient webClient = new WebClient();
-        //        Stream data = webClient.OpenRead(filterWindow.urlReturn().ToString());
-        //        //Stream data = webClient.OpenRead("http://10.87.239.26:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbytype?productType=fx");
-        //        DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
-        //        TradeData[] other = (TradeData[])serializer.ReadObject(data);
-        //        string msg = "";
-        //        foreach (TradeData acc in other)
-        //        {
-        //            msg += acc.ToString() +  System.Environment.NewLine;
+            MessageData[] other = (MessageData[])serializer.ReadObject(data);
+            MessageWindow userwindow = new MessageWindow(other);
+            bool? result = userwindow.ShowDialog();
+        }
 
-        //        }
-        //        dataTrade.Items.Refresh();
-        //        dataTrade.ItemsSource = other;
-        //    }
-        //    else
-        //    {
+        private void toEmailWindow(object sender, RoutedEventArgs e)
+        {
+            WebClient webClient = new WebClient();
+            webClient.Proxy = null;
 
-        //    }
+            Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/mails/ofuser?userName=user1");
 
-        //}
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(EmailData[]));
 
+            EmailData[] other = (EmailData[])serializer.ReadObject(data);
+            EmailWindow userwindow = new EmailWindow(other);
+            bool? result = userwindow.ShowDialog();
+        }
+
+        private void getResultsByDateFilter(object sender, RoutedEventArgs e)
+        {
+            DateTime? sDate = startDate.SelectedDate;
+            DateTime? eDate = endDate.SelectedDate;
+            string dateStr1 = sDate.ToString();
+            string[] words1 = dateStr1.Split(' ');
+            string[] splits1 = words1[0].Split('/');
+
+            string dateStr2 = eDate.ToString();
+            string[] words2 = dateStr2.Split(' ');
+            string[] splits2 = words2[0].Split('/');
+
+            string query = "startDate=" +splits1[2] + "-" + splits1[1] + "-" + splits1[0] + "&endDate=" + splits2[2] + "-" + splits2[1] + "-" + splits2[0];
+            MessageBox.Show(query);
+
+            WebClient webClient = new WebClient();
+            webClient.Proxy = null;
+
+            Stream data = webClient.OpenRead("http://10.87.231.72:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbydate?"+query);
+
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
+
+            TradeData[] other = (TradeData[])serializer.ReadObject(data);
+            DateWindow userwindow = new DateWindow(other);
+            bool? result = userwindow.ShowDialog();
+        }
     }
 
     // =============== Page Class
