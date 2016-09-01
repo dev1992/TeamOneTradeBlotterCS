@@ -12,16 +12,16 @@
         Top="100" Topmost="False">
 
     <Canvas Margin="0,0,2,-4">
-        <Image x:Name="Login_png" Height="662" Source="Login.png" Stretch="Fill" Width="1190" Canvas.Top="-42"/>
+        <Image x:Name="LoginMain_png" Height="880" Source="LoginMain.png" Stretch="Fill" Width="1216" Canvas.Top="-46"/>
 
-        <Label x:Name="label1" Content="Password" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="408" Canvas.Top="376" Width="114" Height="46"/>
-        <Label x:Name="label" Content="User Name" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="408" Canvas.Top="300" Height="47" Width="114"/>
-        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Canvas.Left="527" Canvas.Top="300" TextChanged="txtUserName_TextChanged"/>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="278" Canvas.Top="376" Canvas.Left="527"/>
-        <Button x:Name="btnLogin" Content="Login" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Click="PageAction" Canvas.Left="527" Canvas.Top="432" Height="31" RenderTransformOrigin="1.302,2.129"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Canvas.Left="463" Canvas.Top="330" TextChanged="txtUserName_TextChanged"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="278" Canvas.Top="399" Canvas.Left="463"/>
+        <Button x:Name="btnLogin" Content="Login" Foreground="gray" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Click="PageAction" Canvas.Left="540" FontSize="15" Canvas.Top="478" Height="35" RenderTransformOrigin="1.302,2.129"/>
 
 
-        <Button x:Name="button" Content="Sign Up" Canvas.Left="643" Canvas.Top="486" Width="205" Height="43" Click="goToSignUp"/>
+        <Button x:Name="button" FontSize="25" Foreground="White" Background="#1c86ee" Content="Sign Up" Canvas.Left="950" Canvas.Top="35" Width="205" Height="47" Click="goToSignUp"/>
+        <Image x:Name="pass_png" Height="64" Source="pass.png" Stretch="Fill" Width="66" RenderTransformOrigin="2.976,6.344" Canvas.Left="392" Canvas.Top="381"/>
+        <Image x:Name="user_png" Height="57" Source="user.png" Stretch="Fill" Width="60" Canvas.Top="324" Canvas.Left="398"/>
 
     </Canvas>
 </Window>
