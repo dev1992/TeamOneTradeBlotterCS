@@ -26,10 +26,10 @@
                 </Label>
 
                 <Button Content="Previous" Click="OnPreviousClicked" Margin="2"/>
-                <Button Content="Next" Click="OnNextClicked" Margin="2"/>
-                
+                <Button Content="Next" Click="OnNextClicked" Margin="2" RenderTransformOrigin="2.065,0.453" Width="52"/>
+
             </StackPanel>
-            <DataGrid Name="messages" ItemsSource="{Binding}" Grid.Row="1" Margin="44,130,238,90">
+            <DataGrid Name="messages" ItemsSource="{Binding}" Grid.Row="1" Margin="139,77,143,143">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="creator" Width="*" Binding="{Binding CreatorName}"/>
                     <DataGridTextColumn Header="trader" Width="*" Binding="{Binding traders_traderId}"/>

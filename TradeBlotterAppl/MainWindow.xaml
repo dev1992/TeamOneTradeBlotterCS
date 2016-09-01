@@ -15,21 +15,19 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="448,485,-82,43">
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="492,485,-126,43">
+            <Button Content="Previous" Click="OnPreviousClicked" Margin="2" RenderTransformOrigin="-0.039,0.5" Width="69"/>
             <Label Grid.Row="0" Margin="5">
-                <Label.Content>
-                    <Binding Path="CurrentPage">
-                        <Binding.StringFormat>Current Page: {0}</Binding.StringFormat>
-                    </Binding>
-                </Label.Content>
+                <Binding Path="CurrentPage">
+                    <Binding.StringFormat>Current Page: {0}</Binding.StringFormat>
+                </Binding>
             </Label>
-            <Button Content="Next" Click="OnNextClicked" Margin="2"/>
-            <Button Content="Previous" Click="OnPreviousClicked" Margin="2"/>
+            <Button Content="Next" Click="OnNextClicked" Margin="2" Width="67"/>
         </StackPanel>
-        <StackPanel Margin="104,52,-196,396" Grid.Row="1">
-            <Image x:Name="loginImage_png" Height="52" Source="loginImage.png" Stretch="Fill" Width="73" Margin="560,0,559,0"/>
+        <StackPanel Margin="279,8,-371,440" Grid.Row="1">
+            <Image x:Name="loginImage_png" Height="52" Source="loginImage.png" Stretch="Fill" Width="73" Margin="606,0,605,0" RenderTransformOrigin="2.205,0.769"/>
         </StackPanel>
-        <DataGrid Name="dataTrade" ItemsSource="{Binding}" Grid.Row="1" Margin="44,130,238,90">
+        <DataGrid Name="dataTrade" ItemsSource="{Binding}" Grid.Row="1" Margin="44,130,48,90">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="tradeId" Width="*" Binding="{Binding tradeId}"/>
                 <DataGridTextColumn Header="buyerFirm" Width="*" Binding="{Binding buyerFirm}"/>
@@ -47,15 +45,15 @@
                 <DataGridTextColumn Header="traderId" Width="*" Binding="{Binding traders_traderId}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button" Content="Filter" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" Margin="1014,130,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="44" Click="filterEvent"/>
-        <ListBox x:Name="lstUserName" HorizontalAlignment="Left" FontSize="35" BorderBrush="White" Height="48" Margin="815,52,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180">
+        <Button x:Name="button" Content="Search" Background="LightGray" FontWeight="Regular" FontSize="15" HorizontalAlignment="Left" Margin="76,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="27" Click="filterEvent" RenderTransformOrigin="0.727,1.29"/>
+        <ListBox x:Name="lstUserName" HorizontalAlignment="Left" FontSize="15" BorderBrush="White" Height="48" Margin="901,57,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128">
             <!--<Button x:Name="button1" Background="Transparent" Content="" Width="170" Click="ToUserWindow" Height="38"/>-->
         </ListBox>
-        <Button x:Name="button2" Content="Emails" HorizontalAlignment="Left" Margin="92,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Background="Transparent" Height="38" Click="toEmailWindow"/>
-        <Button x:Name="button3" Content="Messages" HorizontalAlignment="Left" Margin="255,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Background="Transparent" Height="38" RenderTransformOrigin="1.2,0.136" Click="toMessageWindow"/>
-        <DatePicker x:Name="startDate" HorizontalAlignment="Left" Margin="1014,296,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <DatePicker x:Name="endDate" HorizontalAlignment="Left" Margin="1014,380,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button x:Name="resultByFilterDate" Content="Button" HorizontalAlignment="Left" Margin="1014,480,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="getResultsByDateFilter"/>
-        <Button x:Name="profileButton" Content="My Profile" HorizontalAlignment="Left" Margin="420,47,0,0" Grid.Row="1" VerticalAlignment="Top"  Background="Transparent" Width="170" Click="ToUserWindow" Height="38"/>
+        <Button x:Name="button2" Content="Emails" HorizontalAlignment="Left" Margin="44,92,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" Background="Transparent" Height="38" Click="toEmailWindow"/>
+        <Button x:Name="button3" Content="Messages" HorizontalAlignment="Left" Margin="134,92,0,0" Grid.Row="1" VerticalAlignment="Top" Width="106" Background="Transparent" Height="38" RenderTransformOrigin="1.2,0.136" Click="toMessageWindow"/>
+        <DatePicker x:Name="startDate" HorizontalAlignment="Left" Margin="202,14,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <DatePicker x:Name="endDate" HorizontalAlignment="Left" Margin="332,14,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="resultByFilterDate" Content="Filter By Date" HorizontalAlignment="Left" Margin="462,14,0,0" Grid.Row="1" VerticalAlignment="Top" Width="111" Click="getResultsByDateFilter" Height="24"/>
+        <Button x:Name="profileButton" Content="My Profile" HorizontalAlignment="Left" Margin="974,14,0,0" Grid.Row="1" VerticalAlignment="Top"  Background="Transparent" Width="170" Click="ToUserWindow" Height="38" RenderTransformOrigin="1.212,1.553"/>
     </Grid>
 </Window>
