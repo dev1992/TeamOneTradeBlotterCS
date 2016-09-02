@@ -21,12 +21,14 @@ namespace TradeBlotterAppl
     /// </summary>
     public partial class noteWindow : Window
     {
-        public noteWindow()
+        public noteWindow(string name)
         {
             InitializeComponent();
+            this.username = name;
         }
         string newNote;
-        string userName="user1";
+        string userName;
+        public string username;
         private void postingNote(object sender, RoutedEventArgs e)
         {
             newNote = txtNotes.Text;
@@ -36,8 +38,8 @@ namespace TradeBlotterAppl
             {
                 var values = new NameValueCollection();
                 values["noteText"] = newNote;
-                values["userName"] = userName;
-                var res = client.UploadValues("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/notes", values);
+                values["userName"] = this.username;
+                var res = client.UploadValues("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/notes/create", values);
                 var str = Encoding.Default.GetString(res);
 
             }

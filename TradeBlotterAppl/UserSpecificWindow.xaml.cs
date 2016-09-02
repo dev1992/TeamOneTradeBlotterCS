@@ -30,9 +30,11 @@ namespace TradeBlotterAppl
     public partial class UserSpecificWindow : Window
     {
         private readonly PagingCollectionViewUser _cview;
-        public UserSpecificWindow(TradeData[] other)
+        public string username;
+        public UserSpecificWindow(TradeData[] other,string name)
         {
             InitializeComponent();
+            this.username = name;
             this._cview = new PagingCollectionViewUser(
                 other,
                 15

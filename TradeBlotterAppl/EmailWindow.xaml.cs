@@ -32,11 +32,13 @@ namespace TradeBlotterAppl
     {
         public string emailReceiver;
         public string emailContent;
-        public string emailSender = "user1";
+        public string emailSender;
         private readonly PagingCollectionViewEmail _cview;
-        public EmailWindow(EmailData[] other)
+        public string username;
+        public EmailWindow(EmailData[] other,string name)
         {
             InitializeComponent();
+            this.username = name;
             this._cview = new PagingCollectionViewEmail(
                 other,
                 15
@@ -71,7 +73,7 @@ namespace TradeBlotterAppl
             {
                 var values = new NameValueCollection();
                 values["mailBody"] = emailContent;
-                values["sender"] = emailSender;
+                values["sender"] = this.username;
                 values["receiver"] = emailReceiver;
                 var res = client.UploadValues("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/mails/send", values);
                 var str = Encoding.Default.GetString(res);

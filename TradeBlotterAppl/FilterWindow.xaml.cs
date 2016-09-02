@@ -24,6 +24,7 @@ namespace TradeBlotterAppl
     public partial class FilterWindow : Window
     {
         String[] FilterType = new string[10];
+        public string username;
 
         public FilterWindow()
         {

@@ -11,9 +11,10 @@ namespace TradeBlotterAppl
     class Notes
     {
         [DataMember]
-        public int noteId;
+        public int noteId {
+            get; set; }
         [DataMember]
-        public string noteText;
+        public string noteText { get; set; }
         public Notes(int noteId,string noteText)
         {
             this.noteId = noteId;

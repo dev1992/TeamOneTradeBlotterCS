@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TradeBlotterAppl"
         mc:Ignorable="d"
-        Title="noteWindow" Height="300" Width="300">
+        Title="noteWindow" Height="500" Width="500">
     <Grid>
-        <TextBox x:Name="txtNotes" HorizontalAlignment="Left" Height="68" Margin="203,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="89"/>
-        <Button x:Name="button" Content="Post Note" HorizontalAlignment="Left" Margin="207,149,0,0" VerticalAlignment="Top" Width="75" Click="postingNote"/>
-        <DataGrid x:Name="dataNotesGrid" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Height="129" Width="178"/>
-        <Label x:Name="label" Content="Enter your note" HorizontalAlignment="Left" Margin="191,31,0,0" VerticalAlignment="Top" Width="91" Height="23"/>
+        <TextBox x:Name="txtNotes" HorizontalAlignment="Left" Height="68" Margin="345,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="89"/>
+        <Button x:Name="button" Content="Post Note" HorizontalAlignment="Left" Margin="359,172,0,0" VerticalAlignment="Top" Width="75" Click="postingNote"/>
+        <DataGrid x:Name="dataNotesGrid" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Height="225" Width="268"/>
+        <Label x:Name="label" Content="Enter your note" HorizontalAlignment="Left" Margin="332,13,0,0" VerticalAlignment="Top" Width="91" Height="31"/>
         <Label x:Name="label1" Content="Your Notes" HorizontalAlignment="Left" Margin="34,31,0,0" VerticalAlignment="Top" Width="93"/>
 
 

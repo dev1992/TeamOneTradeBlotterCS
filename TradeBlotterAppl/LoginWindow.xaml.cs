@@ -47,7 +47,7 @@ namespace TradeBlotterAppl
                 var str = Encoding.Default.GetString(res);
                 if (str == "true")
                 {
-                    MainWindow userLog = new MainWindow();
+                    MainWindow userLog = new MainWindow(username);
                     //FilterWindow filterWindowFilter = new FilterWindow();
                     naam = txtUserName.Text;
                     userLog.lstUserName.Items.Add(naam);

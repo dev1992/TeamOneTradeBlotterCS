@@ -32,12 +32,14 @@ namespace TradeBlotterAppl
     {
         public string messageSubject;
         public string messageContent;
-        public string messageSender = "user1";
+        public string messageSender;
         private readonly PagingCollectionViewMessage _cview;
-        public MessageWindow(MessageData[] other)
+        public string username;
+        public MessageWindow(MessageData[] other,string name)
         {
 
             InitializeComponent();
+            this.username = name;
             this._cview = new PagingCollectionViewMessage(
                 other,
                 15
@@ -73,7 +75,7 @@ namespace TradeBlotterAppl
                 var values = new NameValueCollection();
                 values["messageBody"] = messageContent;
                 values["subjectName"] = messageSubject;
-                values["userName"] = messageSender;
+                values["userName"] = this.username;
                 var res = client.UploadValues("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/messages/create", values);
                 var str = Encoding.Default.GetString(res);
 

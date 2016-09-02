@@ -29,10 +29,12 @@ namespace TradeBlotterAppl
     {
         string urlFilter;
         private readonly PagingCollectionView _cview;
+        public string username;
 
-        public MainWindow()
+        public MainWindow(string name)
         {
             InitializeComponent();
+            this.username = name;
 
             // -------------------------
 
@@ -92,12 +94,12 @@ namespace TradeBlotterAppl
                 WebClient webClient = new WebClient();
                 webClient.Proxy = null;
 
-                Stream data = webClient.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbyuser?userName=user2");
+                Stream data = webClient.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/trades/filterbyuser?userName="+this.username);
 
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(TradeData[]));
 
                 TradeData[] other = (TradeData[])serializer.ReadObject(data);
-                UserSpecificWindow userwindow = new UserSpecificWindow(other);
+                UserSpecificWindow userwindow = new UserSpecificWindow(other,this.username);
                 bool? result2 = userwindow.ShowDialog();
 
         }
@@ -113,7 +115,7 @@ namespace TradeBlotterAppl
 
             MessageData[] other = (MessageData[])serializer.ReadObject(data);
             
-            MessageWindow userwindow = new MessageWindow(other);
+            MessageWindow userwindow = new MessageWindow(other,this.username);
             bool? result = userwindow.ShowDialog();
         }
 
@@ -122,12 +124,12 @@ namespace TradeBlotterAppl
             WebClient webClient = new WebClient();
             webClient.Proxy = null;
 
-            Stream data = webClient.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/mails/ofuser?userName=user1");
+            Stream data = webClient.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/mails/ofuser?userName="+this.username);
 
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(EmailData[]));
 
             EmailData[] other = (EmailData[])serializer.ReadObject(data);
-            EmailWindow userwindow = new EmailWindow(other);
+            EmailWindow userwindow = new EmailWindow(other,this.username);
             bool? result = userwindow.ShowDialog();
         }
 
@@ -139,15 +141,15 @@ namespace TradeBlotterAppl
             string[] words1 = dateStr1.Split(' ');
             string[] splits1 = words1[0].Split('/');
 
-            MessageBox.Show(splits1.Length.ToString());
+            //MessageBox.Show(splits1.Length.ToString());
 
             string dateStr2 = eDate.ToString();
             string[] words2 = dateStr2.Split(' ');
             string[] splits2 = words2[0].Split('/');
-            MessageBox.Show(splits2.Length.ToString());
+            //MessageBox.Show(splits2.Length.ToString());
 
             string query = "startDate=" +splits1[2] + "-" + splits1[1] + "-" + splits1[0] + "&endDate=" + splits2[2] + "-" + splits2[1] + "-" + splits2[0];
-            MessageBox.Show(query);
+            //MessageBox.Show(query);
 
             WebClient webClient = new WebClient();
             webClient.Proxy = null;
@@ -170,7 +172,7 @@ namespace TradeBlotterAppl
         {
             WebClient webClient3 = new WebClient();
 
-            Stream data = webClient3.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/notes");
+            Stream data = webClient3.OpenRead("http://10.87.226.147:8080/TeamOneTradeBlotterFinalWeb/rest/notes/byuser?userName="+this.username);
             List<Notes> notes;
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<Notes>));
 
@@ -180,9 +182,10 @@ namespace TradeBlotterAppl
             {
                 showNotes += notes.ToString() + "\n";
             }
+            //MessageBox.Show(showNotes);
 
-            noteWindow userwindow = new noteWindow();
-            userwindow.dataNotesGrid.ItemsSource = showNotes;
+            noteWindow userwindow = new noteWindow(this.username);
+            userwindow.dataNotesGrid.ItemsSource = notes;
             bool? result = userwindow.ShowDialog();
 
         }

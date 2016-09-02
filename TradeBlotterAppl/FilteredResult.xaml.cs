@@ -28,6 +28,7 @@ namespace TradeBlotterAppl
     public partial class FilteredResult : Window
     {
         private readonly PagingCollectionViewNew _cview;
+        public string username;
 
         public FilteredResult(TradeData[] other)
         {

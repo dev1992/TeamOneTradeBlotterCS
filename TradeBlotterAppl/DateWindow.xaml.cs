@@ -30,6 +30,7 @@ namespace TradeBlotterAppl
     public partial class DateWindow : Window
     {
         private readonly PagingCollectionViewDate _cview;
+        public string username;
         public DateWindow(TradeData[] other)
         {
             InitializeComponent();
